@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace RestAPIFramework.Features
+namespace RESTAPITesting.Features
 {
     using TechTalk.SpecFlow;
     
@@ -69,19 +69,19 @@ namespace RestAPIFramework.Features
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Get API response using given endpoint", new string[] {
-                "APITest"}, SourceLine=5)]
+                "APITest"}, SourceLine=4)]
         public virtual void GetAPIResponseUsingGivenEndpoint()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get API response using given endpoint", null, new string[] {
                         "APITest"});
-#line 6
+#line 5
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
+#line 7
+ testRunner.Given("I have an endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
- testRunner.Given("I have an endpoint \'<endpoint>\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
  testRunner.When("I call get method of API", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 10
+#line 9
  testRunner.Then("I get API response in json format", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -96,26 +96,77 @@ this.ScenarioInitialize(scenarioInfo);
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Call a userID", null, @__tags);
-#line 13
+#line 12
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
+#line 14
+ testRunner.Given("I have an endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 15
- testRunner.Given("I have an endpoint \'<endpoint>\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.When(string.Format("I call get method to get user information using \'{0}\'", userid), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 16
- testRunner.When(string.Format("I call get method to get user information using {0}", userid), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 17
  testRunner.Then("I get user information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Call a userID, User Info, user10001", new string[] {
-                "Test2"}, SourceLine=20)]
+                "Test2"}, SourceLine=19)]
         public virtual void CallAUserID_UserInfo_User10001()
         {
-#line 13
+#line 12
 this.CallAUserID("user10001", ((string[])(null)));
 #line hidden
+        }
+        
+        public virtual void GetUserAccountInformationUsingUseridAndAccountNumber(string userid, string accountNumber, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "Test3"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get User account information using userid and account number", null, @__tags);
+#line 23
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 25
+ testRunner.Given("I have an endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 26
+ testRunner.When(string.Format("I call get method for user account information using \'{0}\' and \'{1}\'", userid, accountNumber), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 27
+ testRunner.Then("I am able to get user account information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Get User account information using userid and account number, User Data, user1000" +
+            "2", new string[] {
+                "Test3"}, SourceLine=30)]
+        public virtual void GetUserAccountInformationUsingUseridAndAccountNumber_UserData_User10002()
+        {
+#line 23
+this.GetUserAccountInformationUsingUseridAndAccountNumber("user10002", "5435945161212", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("User Registration for a given endpoint", new string[] {
+                "Test4"}, SourceLine=33)]
+        public virtual void UserRegistrationForAGivenEndpoint()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Registration for a given endpoint", null, new string[] {
+                        "Test4"});
+#line 34
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 36
+ testRunner.Given("I have an endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 37
+ testRunner.When("I call a Post method to register a user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 38
+ testRunner.Then("user will be registered successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
         }
         
         [TechTalk.SpecRun.TestRunCleanup()]
