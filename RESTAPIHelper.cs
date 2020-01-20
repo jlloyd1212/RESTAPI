@@ -49,7 +49,7 @@ namespace RESTAPITesting
 
         public static RestRequest CreatePostRequest()
         {
-           // int inputDate = 1984-1-8;
+            int inputDate = 1984-1-8;
             var userInfo = new UserInformation();
             userInfo.FirstName = "Samuel";
             userInfo.LastName = "Salome";
